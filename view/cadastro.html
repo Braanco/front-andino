@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../style/style_cadastro.css">
+    <link rel="stylesheet" href="../style/style-delete.css">
+</head>
+
+<body>
+    <header>
+        <div class="container_titulo">
+            <h1 class="title_projeto">Andino turismo</h1>
+        </div>
+
+        <div class="container_menu">
+            <a href="../index.html">Home</a>
+            <a href="./register.html">Registro de Viagem</a>
+            <a href="./list.html">Lista de Viagem</a>
+            <a href="#">Comissão</a>
+        </div>
+    </header>
+
+    <main class="corpo_conteudo">
+        <div class="container-conteudo">
+            <div class="container-cadastro">
+                <h3>Cadastrar Empregado</h3>
+
+                <label class="label1" for="cadastro-nome">Nome Empregado</label>
+                <input type="text" name="cadastro-nome" id="cadastro-nome">
+
+                <label class="label2" for="cadastro-registro">Registro do Empregado</label>
+                <input type="number" name="cadastro-registro" id="cadastro-registro">
+
+
+                <label class="label3" for="Cadastro-salario">Salario do Empregado</label>
+                <input type="number" name="Cadastro-salario" id="cadastro-salario">
+
+                <input type="submit" id="submit-cadastrar" value="Cadastrar">
+            </div>
+
+            <div class="container-delete">
+                <h3>Deletar empregado</h3>
+
+                <div>
+                    <label for="registro">Número de registro</label>
+                    <input type="number" name="registro" id="registro">
+                    <input type="submit" name="pesquisar" id="pesquisar" value="Pesq.">
+                </div>
+
+                
+                <label for="campo-nome">Nome Empregado </label>
+
+                <div id="campo-nome"></div>
+
+                <label for="campo-registro">Registro do Empregado </label>
+                <div id="campo-registro"></div>
+
+
+                <label for="campo-salario">Salario</label>
+
+                <div id="campo-salario"></div>
+
+                <input type="submit" name="submit-delete" id="submit-delete" value="Deletar">
+
+            </div>
+        </div>
+
+
+
+
+    </main>
+    <script src="../script/cadastrar.js"></script>
+</body>
+
+</html>

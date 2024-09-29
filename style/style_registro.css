@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 14px;
+}
+a{
+    padding: 1rem;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+
+.container_titulo{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.container_menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;   
+    margin-bottom: 2rem;
+}
+
+.corpo_conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 102vh;
+    border: black solid;
+    border-radius: 1%;
+    border-right: none;
+    margin: 0em 10em 0em 5em ;
+    box-sizing: border-box
+}
+
+.box-titulo{
+width: 100%;
+height: 5em;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.titulo-registro{
+    font-size: 35px;
+
+}
+
+
+.box-form{
+    display: flex;
+    width: 45%;
+    height: 75%;
+    padding-left: 2em;
+    justify-content: start;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 2%;
+    
+}
+.form-registro{
+    width: 95%;
+    height: 100%;
+}
+
+
+/* organização dos itens do formulario*/
+
+.lbl-item{
+    font-family: "serif";
+    font-size: 25px;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    height: 80%;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(9, 12.5%);
+    align-items: center;
+}
+
+
+.lbl-name{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#name{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.lbl-phone {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#phone{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.lbl-home{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+#home_address{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.lbl-hotel{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+#hotel_name{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.lbl-hotel-address{
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+#hotel_address{
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+.lbl-date{
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+#tour_date{
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+.lbl-quantity{
+    grid-column: 1/2;
+    grid-row: 7/8;
+}
+#person_quantity{
+    grid-column: 2/3;
+    grid-row: 7/8;
+}
+.lbl-tour{
+    grid-column: 1/2;
+    grid-row: 8/9;
+}
+#tour_name{
+    height: 40%;
+    grid-column: 2/3;
+    grid-row: 8/9;
+}
+.lbl-register{
+    grid-column: 1/2;
+    grid-row: 9/10;
+}
+.inp-register {
+    grid-column: 2/3;
+    grid-row: 9/10;
+}
+
+input{
+    outline: none;
+    border: 1px solid black;
+    background-color:rgba(229, 216, 223, 0.31);
+    border-radius: 4px;
+    width: 100%;
+    height: 2em;
+ 
+}
+
+
+/* Remove as setinhas no Chrome, Safari e Edge */
+.inp-register[type="number"]::-webkit-outer-spin-button,
+.inp-register[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Remove as setinhas no Firefox */
+.inp-register[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.box-submit{
+    width: 100%;
+    text-align: left;
+    margin-top: 2rem;
+}
+.box-submit input{
+    margin-top: 5em;
+    width: 10em;
+    height: 2em;
+}
+
+#tour_name{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+
+/* Media Query for devices with max-width of 600px */
+@media only screen and (max-width: 600px) {
+    .container_titulo {
+        font-size: 24px;
+    }
+
+    a {
+        padding: 0.5rem;
+        font-size: medium;
+    }
+
+    .corpo_conteudo {
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .box-titulo {
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .titulo-registro {
+        font-size: 28px;
+    }
+
+    .box-form {
+        width: 90%;
+        height: auto;
+        padding-left: 1em;
+        flex-direction: column;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(16, auto);
+    }
+
+    .lbl-name {
+        grid-column: 1;
+    }
+    #name {
+        grid-column: 1;
+    }
+
+    .lbl-phone {
+        grid-column: 1;
+    }
+    #phone {
+        grid-column: 1;
+    }
+
+    .lbl-home {
+        grid-column: 1;
+    }
+    #home_address {
+        grid-column: 1;
+    }
+
+    .lbl-hotel {
+        grid-column: 1;
+    }
+    #hotel_name {
+        grid-column: 1;
+    }
+
+    .lbl-hotel-address {
+        grid-column: 1;
+    }
+    #hotel_address {
+        grid-column: 1;
+    }
+
+    .lbl-date {
+        grid-column: 1;
+    }
+    #tour_date {
+        grid-column: 1;
+    }
+
+    .lbl-quantity {
+        grid-column: 1;
+    }
+    #person_quantity {
+        grid-column: 1;
+    }
+
+    .lbl-tour {
+        grid-column: 1;
+    }
+    #tour_name {
+        height: auto;
+        grid-column: 1;
+    }
+
+    input {
+        height: 2.5em;
+    }
+
+    .box-submit input {
+        margin-top: 2em;
+        width: 100%;
+        height: 2.5em;
+    }
+
+    #tour_name {
+        height: auto;
+    }
+}

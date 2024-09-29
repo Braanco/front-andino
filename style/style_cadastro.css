@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 14px;
+}
+
+
+
+.container_titulo{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.container_menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;   
+    margin-bottom: 2rem;
+}
+.container_menu a{
+    padding: 1rem;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+.corpo_conteudo{
+    width: auto;
+    height: 80vh;
+    border: black solid;
+    border-radius: 1%;
+    border-right: none;
+    margin: 0em 10em 0em 5em ;
+    box-sizing: border-box;
+}
+
+.container-conteudo{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center; 
+}
+.container-cadastro label{
+    font-size: 19px;
+}
+
+.container-cadastro{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 50%;
+    height: 40%;
+    padding-left: 3em;
+    margin-left: 2em;
+    border: 1px black solid;
+}
+.container-cadastro h3{
+    text-align: center;
+    font-size: 35px;
+
+}
+.container-cadastro input{
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.container-cadastro input{
+    border: 1px solid black;
+    width: 30%;
+    padding-top: 0.5em;
+
+}
+#cadastro-salario{
+    width: 20%;
+    margin-bottom: 2em;
+}
+
+#cadastro-nome{
+    width: 60%;
+}
+
+/* Remove as setinhas no Chrome, Safari e Edge */
+#cadastro-registro[type="number"]::-webkit-outer-spin-button,
+#cadastro-registro[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Remove as setinhas no Firefox */
+#cadastro-registro[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Remove as setinhas no Chrome, Safari e Edge */
+#cadastro-salario[type="number"]::-webkit-outer-spin-button,
+#cadastro-salario[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Remove as setinhas no Firefox */
+#cadastro-salario[type="number"] {
+    -moz-appearance: textfield;
+}
+

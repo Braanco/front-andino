@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    
+}
+
+p{
+    font-size: 14px;
+}
+/* Remove as setinhas no Chrome, Safari e Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Remove as setinhas no Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/*estilo principal da pagina*/
+.container_menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;   
+    margin-bottom: 2rem;
+    
+}
+.container_menu a{
+    padding: 1rem;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+.container_menu a{
+    padding: 1rem;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+.container_titulo{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.corpo_conteudo{
+    width: auto;
+    height: 102vh;
+    border: black solid;
+    border-radius: 1%;
+    border-right: none;
+    margin: 0em 10em 0em 5em ;
+    box-sizing: border-box;
+}
+
+/*estilo do conteudo*/
+.container-conteudo{
+    display:flex;
+    flex-direction: column;
+}
+
+.container-subtitulo{
+    text-align: center;
+    font-size: 35px;
+    font-family: 'serif';
+
+}
+
+.container-pesquisa{
+    text-align: end;
+    font-size: 20px;
+    margin-bottom: 2em;
+    margin-right: 2em;
+}
+.contianer-mostra-pesquisa{
+    width: 50%;  
+    margin-left: 3em;
+    padding: 1em;
+    border: 1px black solid;
+    border-radius: 5%;
+}
+.contianer-mostra-pesquisa label{
+    font-size: 20px;
+   
+}
+.contianer-mostra-pesquisa div{
+    width: 60%;
+    height: 1.5em;
+    
+}
+
+#campo-nome{
+    border: 1px black solid;
+    
+}
+#campo-registro{
+    border: 1px black solid;
+}
+#campo-comissao{
+    border: 1px black solid;
+}
+
+.container-tabela{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    margin-left: 2rem;
+}
+.container-tabela h3{
+    font-size: 30px;
+}
+
+table {
+    width: 100%; /* Tabela ocupando 100% da largura */
+    border-collapse: collapse; /* Remover os espaçamentos entre as bordas */
+}
+
+/* Estilizando o cabeçalho */
+th {
+    background-color:#ddd; /* Cor de fundo do cabeçalho */
+    color: black; /* Cor do texto */
+    padding: 12px; /* Espaçamento interno */
+    text-align: left; /* Alinhamento do texto à esquerda */
+}
+
+/* Estilizando as células */
+td {
+    padding: 12px; /* Espaçamento interno */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    border-bottom: 1px solid #ddd; /* Linha divisória entre as linhas */
+}
+
+/* Cor de fundo alternada para as linhas */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo para linhas pares */
+}
+
+/* Estilizando a linha ao passar o mouse */
+tr:hover {
+    background-color: #ddd; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilizando bordas */
+table, th, td {
+    border: 1px solid black; /* Bordas nas células e na tabela */
+}
+
+#campo-nome,#campo-registro,#campo-comissao{
+    padding-top: 0.2em;
+    align-items: center;
+}
+
+.container-tabela {
+    max-height: 400px; /* Define uma altura máxima para o contêiner da tabela */
+    overflow-y: auto;  /* Adiciona um scroll vertical */
+    overflow-x: auto;  /* Adiciona um scroll horizontal se necessário */
+}
+
+table {
+    width: 100%;      /* A tabela ocupa 100% da largura do contêiner */
+    border-collapse: collapse;  /* Remove os espaços entre as células */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Borda simples */
+    padding: 8px;           /* Espaçamento interno */
+}
+
+th {
+    background-color: #f2f2f2; /* Cor de fundo para o cabeçalho */
+    position: sticky;          /* Cabeçalho "grudado" no topo */
+    top: 0;                    /* Define o topo do cabeçalho */
+    z-index: 2;                /* Garante que o cabeçalho esteja acima das linhas */
+}

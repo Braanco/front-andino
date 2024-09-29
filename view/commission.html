@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commission</title>
+    <link rel="stylesheet" href="../style/style_commission.css">
+</head>
+
+<body>
+    <header>
+        <div class="container_titulo">
+            <h1 class="title_projeto">Andino turismo</h1>
+        </div>
+
+        <div class="container_menu">
+            <a href="../index.html">Home</a>
+            <a href="register.html">Registro de Viagem</a>
+            <a href="list.html">Lista de Viagem</a>
+            <a href="#">Comissão</a>
+        </div>
+    </header>
+    <main class="corpo_conteudo">
+        <div class="container-conteudo">
+            <div class="container-subtitulo">
+                <h3 class="titulo-comissao">Comissão do Empregado</h3>
+            </div>
+            <div class="container-pesquisa">
+                <label for="numero-registro">Digite o número de registro:</label>
+                <input type="number" name="numero-registro" id="numero-registro">
+                <input type="submit" name="submit-pesquisar" id="submit-pesquisar" value="Pesquisar">
+            </div>
+
+            <div class="contianer-mostra-pesquisa">
+                <label for="campo-nome">Nome do empregado</label><br>
+                <div id="campo-nome" class="campo">
+                </div>
+
+                <label for="campo-registro">Número de Registro</label><br>
+                <div id="campo-registro" class="campo">
+                </div>
+
+                <label for="">Comissão do Empregado</label><br>
+                <div id="campo-comissao" class="campo">
+                </div>
+            </div>
+            <hr>
+            <div class="container-tabela">
+                <h3 class="titulo-registro">Registro de passeio por funcionário</h3>
+                <table id="data-table" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID do clientes</th>
+                            <th scope="col">Nome cliente</th>
+                            <th scope="col">Telefone do cliente</th>
+                            <th scope="col">Endereço do cliente</th>
+                            <th scope="col">Quantidade de pessoas</th>
+                            <th scope="col">Data do passeio</th>
+                            <th scope="col">Nome do passeio</th>
+                            <th scope="col">Preço do passeio</th>
+                            <th scope="col">Preço final</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <script src="../script/commission.js"></script>
+    </main>
+
+
+</body>
+
+</html>
