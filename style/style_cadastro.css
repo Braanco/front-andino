@@ -22,6 +22,7 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 30px;
+    color: gray;
 }
 
 .container_menu{
@@ -34,7 +35,7 @@ body{
     padding: 1rem;
     text-decoration: none;
     font-size: large;
-    color: black;
+    color: blanchedalmond;
 }
 .corpo_conteudo{
     width: auto;
@@ -55,6 +56,7 @@ body{
 }
 .container-cadastro label{
     font-size: 19px;
+    color: blanchedalmond;
 }
 
 .container-cadastro{
@@ -70,11 +72,13 @@ body{
 .container-cadastro h3{
     text-align: center;
     font-size: 35px;
+    color: blanchedalmond;
 
 }
 .container-cadastro input{
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
+    background-color: rgb(255, 255, 255,0.2);
 }
 
 .container-cadastro input{
@@ -114,3 +118,25 @@ body{
     -moz-appearance: textfield;
 }
 
+.container-delete h3{
+    font-size: 35px;
+    color: blanchedalmond;
+}
+
+.container-delete .container-registro label{
+    color:gray;
+    font-weight: 400;
+}
+.container-registro #registro{
+    background-color: rgb(255, 255, 255,0.2);
+}
+.container-delete label{
+    color: blanchedalmond;
+}
+
+#campo-nome, #campo-registro,#campo-salario{
+    background-color: rgb(255, 255, 255,0.2);
+}
+.container-delete input,#submit-cadastrar{
+    background-color: rgb(255, 255, 255,0.5);
+}
