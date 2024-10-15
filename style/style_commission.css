@@ -157,15 +157,18 @@ td {
     border-bottom: 1px solid #ddd; /* Linha divisória entre as linhas */
 }
 
-/* Cor de fundo alternada para as linhas */
+
+/*Cor de fundo alternada para as linhas */
 tr:nth-child(even) {
     background-color: #f2f2f2; /* Cor de fundo para linhas pares */
 }
 
 /* Estilizando a linha ao passar o mouse */
 tr:hover {
-    background-color: #ddd; /* Cor de fundo ao passar o mouse */
+    background-color: rgb(255, 255, 255,0.5); /* Cor de fundo ao passar o mouse */
 }
+
+
 
 /* Estilizando bordas */
 table, th, td {
@@ -190,9 +193,14 @@ table {
 
 th, td {
     border: 1px solid #ddd; /* Borda simples */
-    padding: 8px;           /* Espaçamento interno */
-}
+    padding: 8px;   /* Espaçamento interno */
+    
 
+}
+td{
+    background-color: rgb(255, 255, 255,0.2);
+    color: blanchedalmond;
+}
 th {
     background-color: rgb(255, 255, 255,0.5); /* Cor de fundo para o cabeçalho */
     position: sticky;          /* Cabeçalho "grudado" no topo */
