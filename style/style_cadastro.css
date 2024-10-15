@@ -9,7 +9,11 @@ p{
     font-size: 14px;
 }
 
-
+body{
+    background-image: url(../assets/1121302.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .container_titulo{
     width: 100%;
@@ -34,7 +38,7 @@ p{
 }
 .corpo_conteudo{
     width: auto;
-    height: 80vh;
+    height: 100vh;
     border: black solid;
     border-radius: 1%;
     border-right: none;

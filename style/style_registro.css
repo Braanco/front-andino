@@ -19,6 +19,11 @@ a{
     color: black;
 }
 
+body{
+    background-image: url(../assets/1121302.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .container_titulo{
     width: 100%;
@@ -28,12 +33,18 @@ a{
     justify-content: center;
     font-size: 30px;
 }
+.container_titulo h1{
+    color: gray;
+}
 
 .container_menu{
     display: flex;
     justify-content: center;
     width: 100%;   
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;  
+}
+.container_menu a{
+    color: blanchedalmond;
 }
 
 .corpo_conteudo{
@@ -59,6 +70,7 @@ align-items: center;
 }
 .titulo-registro{
     font-size: 35px;
+    color: blanchedalmond;
 
 }
 
@@ -70,8 +82,9 @@ align-items: center;
     padding-left: 2em;
     justify-content: start;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid gray;
     border-radius: 2%;
+    background-color: rgb(255, 255, 255,0.5);
     
 }
 .form-registro{
