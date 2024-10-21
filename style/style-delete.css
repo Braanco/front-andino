@@ -5,24 +5,25 @@
     width: 50%;
     height: 40%;
     padding-left: 3em;
-    margin-left: 2em;
-    border: 1px black solid;
+    margin-left: 2em;  
+}
+.container-delete h3{  /*atenção*/
+    font-size: 39px;
+    color: #066a75;
+    position: relative;
+    top: -78px;    
+    margin-left: 100px; 
     
 }
 
-.container-delete h3{
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 0.4em;
-}
-
 .container-delete #campo-registro,#campo-nome,#campo-salario{
-    width: 40%;
+    width: 70%;
     height: 1.5em;
     justify-content: start;
     text-align: right;
     margin-bottom: 0.5em;
-    border: 1px solid;
+    border: 2px solid rgba(72, 163, 165, 0.8);
+    
     text-align: center;
 }
 
@@ -33,25 +34,36 @@
 .container-delete div input{
     padding-top: 0.2em;
     
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .container-delete div #pesquisar{
     padding-top: 0.2em;
-    width: 3em;
+    width: 7em;
 }
-    
-
-
 .container-delete div{
     display: flex;
     justify-content:flex-end;
+    flex-direction: column; /* Altera a direção do eixo principal para coluna */
+    align-items: flex-end;
     gap: 0.2em;
     margin-right: 0.5em;
 }
 
 .container-delete #submit-delete{
-    border: 1px solid black;
+    border: 5px ;
     padding-top: 0.5em;
-    width: 30%;
+    width: 70%;
+    
 }
+#campo-nome, #campo-registro, #campo-salario {
+    min-height: 20px; /* Define uma altura mínima para as divs */
+    border: 2px solid rgba(72, 163, 165, 0.8);
+    padding: 5px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaço entre as divs */
+    background-color: #f9f9f9; /* Cor de fundo (opcional) */
+  }
+  #registro{
+    border: 2px solid rgba(72, 163, 165, 0.8);
+  }
+
