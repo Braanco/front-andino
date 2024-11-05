@@ -55,6 +55,7 @@ body{
     align-items: center; 
 }
 .container-cadastro label{
+    width: 70%;
     font-size: 19px;
     color: blanchedalmond;
 }
@@ -63,9 +64,10 @@ body{
     display: flex;
     flex-direction: column;
     text-align: start;
-    width: 50%;
+    align-items: center;
+    width: 40%;
     height: 40%;
-    padding-left: 3em;
+    
     margin-left: 2em;
     border: 1px black solid;
 }
@@ -73,6 +75,7 @@ body{
     text-align: center;
     font-size: 35px;
     color: blanchedalmond;
+    margin-bottom: 0.2em;
 
 }
 .container-cadastro input{
@@ -83,18 +86,18 @@ body{
 
 .container-cadastro input{
     border: 1px solid black;
-    width: 30%;
+    width: 70%;
     padding-top: 0.5em;
 
 }
 #cadastro-salario{
-    width: 20%;
+    
     margin-bottom: 2em;
 }
 
-#cadastro-nome{
+/*#cadastro-nome{
     width: 60%;
-}
+}*/
 
 /* Remove as setinhas no Chrome, Safari e Edge */
 #cadastro-registro[type="number"]::-webkit-outer-spin-button,
@@ -138,5 +141,6 @@ body{
     background-color: rgb(255, 255, 255,0.2);
 }
 .container-delete input,#submit-cadastrar{
+    border-radius: 0.5em;
     background-color: rgb(255, 255, 255,0.5);
 }
