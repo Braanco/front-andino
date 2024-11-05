@@ -5,15 +5,15 @@
     width: 50%;
     height: 40%;
     padding-left: 3em;
-    margin-left: 2em;  
-}
-.container-delete h3{  /*atenção*/
-    font-size: 39px;
-    color: #066a75;
-    position: relative;
-    top: -78px;    
-    margin-left: 100px; 
+    margin-left: 2em;
+    border: 1px black solid;
     
+}
+
+.container-delete h3{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 0.4em;
 }
 
 .container-delete #campo-registro,#campo-nome,#campo-salario{
@@ -22,8 +22,7 @@
     justify-content: start;
     text-align: right;
     margin-bottom: 0.5em;
-    border: 2px solid rgba(72, 163, 165, 0.8);
-    
+    border: 1px solid;
     text-align: center;
 }
 
@@ -34,18 +33,19 @@
 .container-delete div input{
     padding-top: 0.2em;
     
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid black;
 }
 
 .container-delete div #pesquisar{
     padding-top: 0.2em;
-    width: 7em;
+    width: 3em;
 }
+    
+
+
 .container-delete div{
     display: flex;
     justify-content:flex-end;
-    flex-direction: column; /* Altera a direção do eixo principal para coluna */
-    align-items: flex-end;
     gap: 0.2em;
     margin-right: 0.5em;
 }
