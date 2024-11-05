@@ -17,8 +17,8 @@
 }
 
 .container-delete #campo-registro,#campo-nome,#campo-salario{
-    width: 40%;
-    height: 1.5em;
+    width: 60%;
+    height: 1.8em;
     justify-content: start;
     text-align: right;
     margin-bottom: 0.5em;
@@ -51,7 +51,12 @@
 }
 
 .container-delete #submit-delete{
-    border: 1px solid black;
+    height: 2em;
+    margin-top: 1.5em;
     padding-top: 0.5em;
-    width: 30%;
+    width: 60%;
+}
+
+.container-registro{
+    margin-bottom: 1.8em;
 }

@@ -139,7 +139,6 @@ body{
 }
 
 #campo-nome, #campo-registro,#campo-salario{
-    height: 5px;
     background-color: rgb(255, 255, 255,0.2);
 }
 .container-delete input,#submit-cadastrar{
@@ -148,11 +147,18 @@ body{
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.esqueceu{
+    font-size: 17px;
+    width: 70%;
+    text-align: end;
+    padding-right:1em;
+    padding-top: 0.5em;
+}
+
 /*parte de deletar*/
 #delete{
    
     border: none;
     border-left: 2px solid black;
 }
-
 
