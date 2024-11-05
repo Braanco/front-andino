@@ -69,7 +69,7 @@ body{
     height: 40%;
     
     margin-left: 2em;
-    border: 1px black solid;
+   
 }
 .container-cadastro h3{
     text-align: center;
@@ -134,13 +134,25 @@ body{
     background-color: rgb(255, 255, 255,0.2);
 }
 .container-delete label{
+    font-size: 19px;
     color: blanchedalmond;
 }
 
 #campo-nome, #campo-registro,#campo-salario{
+    height: 5px;
     background-color: rgb(255, 255, 255,0.2);
 }
 .container-delete input,#submit-cadastrar{
     border-radius: 0.5em;
-    background-color: rgb(255, 255, 255,0.5);
+    border: 0 none;
+    background-color: rgba(255, 255, 255, 0.5);
 }
+
+/*parte de deletar*/
+#delete{
+   
+    border: none;
+    border-left: 2px solid black;
+}
+
+
