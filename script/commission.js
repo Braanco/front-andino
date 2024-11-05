@@ -1,5 +1,5 @@
-const url = "http://localhost:8080/v1/star_chile/employee/get-Employee/";
-const urlClient = "http://localhost:8080/v1/star_chile/employee/"
+const url = "http://localhost:8080/v1/andino/employee/get-Employee/";
+const urlClient = "http://localhost:8080/v1/andino/employee/"
 
 document.getElementById("submit-pesquisar").addEventListener('click', function (event) {
     event.preventDefault();

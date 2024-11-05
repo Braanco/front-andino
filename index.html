@@ -1,77 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <title>Andino turismo</title>
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="./style/style-login.css">
 </head>
-
 <body>
-    <header>
-        <!--<div class="container_titulo">
-            <h1 class="title_projeto">Andino turismo</h1>
-        </div>-->
-
-        <div class="container_menu">
-            <a href="#">Home</a>
-            <a href="./view/register.html">Registro de Viagem</a>
-            <a href="./view/list.html">Lista de Viagem</a>
-            <a href="./view/commission.html">Comissão</a>
-            <a href="./view/cadastro.html">Cadastrar</a>
-        </div>
-    </header>
-    <main class="corpo_conteudo">
-        <div class="primeiro_titulo">
-        </div>
-        <div class="all-container">
-            <div class="container_conteudo scrollable-div-content">
-                <h2 class="titulo">Andino Turismo</h2>
-                <div class="primeiro_conteudo conteudo">
-                    <div class="container_text">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis eligendi velit voluptas
-                            dolorem saepe nemo autem adipisci tempora accusantium molestiae. Magni aut libero dicta enim
-                            modi nesciunt atque incidunt nihil.
-                        </p>
-                    </div>
-                </div>
-
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Número de Registro:</label>
+                <input type="text" id="username" name="username" required>
             </div>
-
-            <div class="container-clima">
-                <div class="containerA">
-                    <script>
-                        (function (d, s, id) {
-                            if (d.getElementById(id)) {
-                                if (window.__TOMORROW__) {
-                                    window.__TOMORROW__.renderWidget();
-                                }
-                                return;
-                            }
-                            const fjs = d.getElementsByTagName(s)[0];
-                            const js = d.createElement(s);
-                            js.id = id;
-                            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
-
-                            fjs.parentNode.insertBefore(js, fjs);
-                        })(document, 'script', 'tomorrow-sdk');
-                    </script>
-
-                    <div class="tomorrow" data-location-id="019111" data-language="EN" data-unit-system="METRIC"
-                        data-skin="dark" data-widget-type="upcoming" style="padding-bottom:22px;position:relative;">
-                        <a href="https://www.tomorrow.io/weather-api/" rel="nofollow noopener noreferrer"
-                            target="_blank"
-                            style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
-                            <img alt="Powered by the Tomorrow.io Weather API"
-                                src="https://weather-website-client.tomorrow.io/img/powered-by.svg" width="500"
-                                height="18"/>
-                        </a>
-                    </div>
-                </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
             </div>
-        </div>
-    </main>
+            <button type="submit">Entrar</button>
+        </form>
+        <p class="message">Esqueceu a senha? <a href="#">Clique aqui</a></p>
+    </div>
+    <script src="./script/login.js"></script>
 </body>
-
 </html>
