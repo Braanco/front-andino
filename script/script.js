@@ -1,4 +1,4 @@
-const postUrl = "http://localhost:8080/v1/star_chile/create";
+const postUrl = "http://localhost:8080/v1/andino/create";
 
 document.getElementById("submit-register").addEventListener("click", function (event) {
     event.preventDefault();

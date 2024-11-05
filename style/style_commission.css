@@ -6,6 +6,12 @@
     
 }
 
+body{
+    background-image: url(../assets/1121302.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 p{
     font-size: 14px;
 }
@@ -28,18 +34,24 @@ input[type="number"] {
     margin-bottom: 2rem;
     
 }
+
+#numero-registro{
+    background-color: rgb(255, 255, 255,0.5);
+
+}
+
 .container_menu a{
     padding: 1rem;
     text-decoration: none;
     font-size: large;
-    color: black;
+    color: blanchedalmond;
 }
-.container_menu a{
+/*.container_menu a{
     padding: 1rem;
     text-decoration: none;
     font-size: large;
     color: black;
-}
+}*/
 .container_titulo{
     width: 100%;
     height: 3em;
@@ -47,6 +59,7 @@ input[type="number"] {
     align-items: center;
     justify-content: center;
     font-size: 30px;
+    color: gray;
 }
 .corpo_conteudo{
     width: auto;
@@ -68,6 +81,7 @@ input[type="number"] {
     text-align: center;
     font-size: 35px;
     font-family: 'serif';
+    color: blanchedalmond;
 
 }
 
@@ -76,6 +90,7 @@ input[type="number"] {
     font-size: 20px;
     margin-bottom: 2em;
     margin-right: 2em;
+    color: gray;
 }
 .contianer-mostra-pesquisa{
     width: 50%;  
@@ -86,6 +101,7 @@ input[type="number"] {
 }
 .contianer-mostra-pesquisa label{
     font-size: 20px;
+    color: blanchedalmond;
    
 }
 .contianer-mostra-pesquisa div{
@@ -94,16 +110,17 @@ input[type="number"] {
     
 }
 
-#campo-nome{
+#campo-nome,#campo-registro,#campo-comissao{
     border: 1px black solid;
+    background-color: rgb(255, 255, 255,0.2);
     
 }
-#campo-registro{
+/*#campo-registro{
     border: 1px black solid;
 }
 #campo-comissao{
     border: 1px black solid;
-}
+}*/
 
 .container-tabela{
     display: flex;
@@ -117,6 +134,7 @@ input[type="number"] {
 }
 .container-tabela h3{
     font-size: 30px;
+    color:blanchedalmond;
 }
 
 table {
@@ -126,8 +144,8 @@ table {
 
 /* Estilizando o cabeçalho */
 th {
-    background-color:#ddd; /* Cor de fundo do cabeçalho */
-    color: black; /* Cor do texto */
+    background-color:rgb(255, 255, 255,0.5); /* Cor de fundo do cabeçalho */
+    color: gray; /* Cor do texto */
     padding: 12px; /* Espaçamento interno */
     text-align: left; /* Alinhamento do texto à esquerda */
 }
@@ -139,15 +157,10 @@ td {
     border-bottom: 1px solid #ddd; /* Linha divisória entre as linhas */
 }
 
-/* Cor de fundo alternada para as linhas */
-tr:nth-child(even) {
-    background-color: #f2f2f2; /* Cor de fundo para linhas pares */
-}
 
-/* Estilizando a linha ao passar o mouse */
-tr:hover {
-    background-color: #ddd; /* Cor de fundo ao passar o mouse */
-}
+
+
+
 
 /* Estilizando bordas */
 table, th, td {
@@ -172,11 +185,16 @@ table {
 
 th, td {
     border: 1px solid #ddd; /* Borda simples */
-    padding: 8px;           /* Espaçamento interno */
-}
+    padding: 8px;   /* Espaçamento interno */
+    
 
+}
+td{
+    background-color: rgb(255, 255, 255,0.5);
+    color: black;
+}
 th {
-    background-color: #f2f2f2; /* Cor de fundo para o cabeçalho */
+    background-color: rgb(255, 255, 255,0.5); /* Cor de fundo para o cabeçalho */
     position: sticky;          /* Cabeçalho "grudado" no topo */
     top: 0;                    /* Define o topo do cabeçalho */
     z-index: 2;                /* Garante que o cabeçalho esteja acima das linhas */

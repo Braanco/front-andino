@@ -8,6 +8,11 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url(../assets/1121302.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 p {
     font-size: 14px;
@@ -16,10 +21,13 @@ p {
 a {
     padding: 1rem;
     text-decoration: none;
+    transition: none;
     font-size: large;
-    color: black;
+    color: blanchedalmond;
 }
-
+a:hover{
+    color: blanchedalmond;
+}
 
 .container_titulo {
     width: 100%;
@@ -29,6 +37,9 @@ a {
     justify-content: center;
     font-size: 30px;
     
+}
+.container_titulo h1{
+    color: gray;
 }
 .title_projeto{
     font-family: "serif";
@@ -42,8 +53,9 @@ a {
     justify-content: center;
     width: 100%;
     margin-bottom: 2rem;
-    font-family: "serif";
+    font-family: "serif";   
 }
+
 
 .corpo_conteudo {
     display: flex;
@@ -64,16 +76,21 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .titulo-list {
     font-size: 35px;
     font-family: "serif";
     font-weight: 600;
-    
+    color: blanchedalmond;
 }
 
+th{
+    color: gray;
+}
+td{
+    color: blanchedalmond;
+}
 
 
 
@@ -141,11 +158,14 @@ th, td {
 
 .container-pesquisa{
     position: relative;
+    color: gray;
     left: 13%;
+    margin-bottom: 0.5em;
 }
 
 .container-pesquisa input{
     border: 1px black solid;
     border-radius: 5%;
+    opacity: 0.5;
 }
 

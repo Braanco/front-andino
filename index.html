@@ -1,134 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <title>Andino turismo</title>
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="./style/style-login.css">
 </head>
-
 <body>
-    <header>
-        <div class="container_titulo">
-            <h1 class="title_projeto">Andino turismo</h1>
-        </div>
-
-        <div class="container_menu">
-            <a href="#">Home</a>
-            <a href="./view/register.html">Registro de Viagem</a>
-            <a href="./view/list.html">Lista de Viagem</a>
-            <a href="./view/commission.html">Comissão</a>
-            <a href="./view/cadastro.html">Cadastrar</a>
-        </div>
-    </header>
-    <main class="corpo_conteudo">
-        <div class="primeiro_titulo">
-            <h1 class="titulo_bemvindo">Bem vindo ao Andino turismo</h1>
-        </div>
-        <div class="all-container">
-            <div class="container_conteudo scrollable-div-content">
-                <h2 class="top5">Top 5 lugares mais procurados pelos clientes</h2>
-                <div class="primeiro_conteudo conteudo">
-                    <img src="./assets/cajon-del-maipo-banos-colina-1280x720.jpg" alt="imagens_das_montalhas">
-                    <div class="container_text">
-                        <h2>Termas de colina em Cajón del Maipo,Santiago</h2>
-                        <p><span>Preço:</span>R$300,00</p>
-                        <p>Com 7 piscinas de águas termais cercadas por uma estonteante paisagem em plena cordilheiras
-                            dos
-                            Andes, mas as vistas para o vale e o vulcão San José tornam o lugar ainda mais incrivel.
-                        </p>
-                    </div>
-                </div>
-                <div class="segundo_conteudo conteudo">
-                    <img src="https://cdn.getyourguide.com/img/tour/5dfd480a19add.jpeg/98.jpg"
-                        alt="imagens_das_montalhas">
-                    <div class="container_text">
-                        <h2>San Pedro de Atacama: Tour aos Gêiseres do Tatio</h2>
-                        <p><span>Preço:</span>R$450,00</p>
-                        <p>Visite os gêiseres de El Tatio e maravilhe-se com o maior campo geotérmico do hemisfério sul.
-                            Confira o Vale do Rio Putana, com sua fauna e flora nativas, e faça uma parada em uma lagoa
-                            local para admirar os flamingos. </p>
-                    </div>
-                </div>
-                <div class="terceiro_conteudo conteudo">
-                    <img src="https://cdn.getyourguide.com/img/tour/5ea0cc7420e5e.jpeg/98.jpg"
-                        alt="imagens_das_montalhas">
-                    <div class="container_text">
-                        <h2>Puerto Natales: Excursão as Torres del Paine</h2>
-                        <p><span>Preço:</span>R$320,00</p>
-                        <p>
-                            Percorra as incríveis estradas do Parque Nacional Torres del Paine. Desfrute de paradas
-                            fotográficas nos principais mirantes para apreciar a beleza imponente e a paisagem única.
-                            Caminhe por 1 hora ao longo de uma antiga floresta de lengas no lago Grey.
-                        </p>
-                    </div>
-                </div>
-                <div class="quarto_conteudo conteudo">
-                    <img src="https://cdn.getyourguide.com/img/tour/d1c6cab2b397ab7a.jpeg/98.jpg"
-                        alt="imagens_das_montalhas">
-                    <div class="container_text">
-                        <h2>Santiago: excursão a Portillo e Laguna del Inca com piquenique</h2>
-                        <p><span>Preço:</span>R$180,00</p>
-                        <p>
-                            Embarque em uma viagem guiada de dia inteiro à região chilena de Portillo saindo de
-                            Santiago.
-                            Tire fotos na fronteira argentina, veja a Autopista Caracoles, visite o Centro de Esqui
-                            Portillo
-                            e faça um piquenique.
-                        </p>
-                    </div>
-                </div>
-                <div class="quinto_conteudo conteudo">
-                    <img src="https://cdn.getyourguide.com/img/tour/63c98751cd7fd.jpeg/98.jpg"
-                        alt="imagens_das_montalhas">
-                    <div class="container_text">
-                        <h2>San Pedro de Atacama: Passeio pelas Rochas Vermelhas e Lagoas Altiplânicas</h2>
-                        <p><span>Preço:</span>R$290,00</p>
-                        <p>
-                            Descubra as joias do Deserto do Atacama em uma viagem guiada de 1 dia saindo de San Pedro de
-                            Atacama com serviço de busca no hotel. Você verá o Trópico de Capricórnio, Red Rocks ou
-                            Piedras
-                            Rojas, e as lagoas Miscanti e Miñiques
-                        </p>
-                    </div>
-                </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Número de Registro:</label>
+                <input type="text" id="username" name="username" required>
             </div>
-
-            <div class="container-clima">
-                <h3 class="text-clima">Clima</h3>
-                <div class="containerA">
-                    <script>
-                        (function (d, s, id) {
-                            if (d.getElementById(id)) {
-                                if (window.__TOMORROW__) {
-                                    window.__TOMORROW__.renderWidget();
-                                }
-                                return;
-                            }
-                            const fjs = d.getElementsByTagName(s)[0];
-                            const js = d.createElement(s);
-                            js.id = id;
-                            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
-
-                            fjs.parentNode.insertBefore(js, fjs);
-                        })(document, 'script', 'tomorrow-sdk');
-                    </script>
-
-                    <div class="tomorrow" data-location-id="019111" data-language="EN" data-unit-system="METRIC"
-                        data-skin="light" data-widget-type="upcoming" style="padding-bottom:22px;position:relative;">
-                        <a href="https://www.tomorrow.io/weather-api/" rel="nofollow noopener noreferrer"
-                            target="_blank"
-                            style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
-                            <img alt="Powered by the Tomorrow.io Weather API"
-                                src="https://weather-website-client.tomorrow.io/img/powered-by.svg" width="500"
-                                height="18" />
-                        </a>
-                    </div>
-                </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
             </div>
-        </div>
-    </main>
+            <button type="submit">Entrar</button>
+        </form>
+        <p class="message">Esqueceu a senha? <a href="#">Clique aqui</a></p>
+    </div>
+    <script src="./script/login.js"></script>
 </body>
-
 </html>

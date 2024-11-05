@@ -1,4 +1,6 @@
-const url = "http://localhost:8080/v1/star_chile/employee/create"
+const url = "http://localhost:8080/v1/andino/employee/create"
+const token = localStorage.getItem('token')
+
 
 document.getElementById("submit-cadastrar").addEventListener("click", function (event) {
     event.preventDefault();
@@ -21,10 +23,12 @@ document.getElementById("submit-cadastrar").addEventListener("click", function (
 
 async function createEmployee(datas) {
 
+
     const response = await fetch(url, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify(datas)
     });
@@ -49,7 +53,7 @@ async function createEmployee(datas) {
 
 let numberRegistry;
 
-document.getElementById("submit-delete").addEventListener("click",async function (event) {
+document.getElementById("submit-delete").addEventListener("click", async function (event) {
     event.preventDefault();
     await deleteEmployee()
 })
@@ -59,7 +63,7 @@ document.getElementById("pesquisar").addEventListener("click", async function (e
     event.preventDefault();
 
     numberRegistry = parseInt(document.getElementById("registro").value, 10);
-    
+
     await getEmployee(numberRegistry)
 })
 
@@ -68,12 +72,20 @@ async function getEmployee(numberRegistry) {
     try {
 
 
-        const response = await fetch(`http://localhost:8080/v1/star_chile/employee/get-Employee/${numberRegistry}`)
+        const response = await fetch(`http://localhost:8080/v1/andino/employee/get-Employee/${numberRegistry}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+
+
+        })
 
         if (!response.ok) {
             alert("empregado nao encontrado ou numero de registro errado");
             throw new Error("empregado nao encontrado")
-            
+
         }
 
         const data = await response.json();
@@ -85,7 +97,7 @@ async function getEmployee(numberRegistry) {
 
 }
 
-function displayData(data){
+function displayData(data) {
 
     const nome = document.querySelector("#campo-nome")
     const registro = document.querySelector("#campo-registro")
@@ -100,21 +112,24 @@ function displayData(data){
 
 
 async function deleteEmployee() {
+
     try {
-        
+
         if (!numberRegistry) {
             alert("Por favor, busque um registro primeiro."); // Verifica se o registro foi buscado
             return;
         }
 
-        const response = await fetch(`http://localhost:8080/v1/star_chile/employee/delete/${numberRegistry}`, {
+        const response = await fetch(`http://localhost:8080/v1/andino/employee/delete/${numberRegistry}`, {
             method: 'DELETE', headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+
             },
 
         })
 
-        if(response.ok){
+        if (response.ok) {
             alert("empregado deletado com sucesso")
         }
 
@@ -125,8 +140,8 @@ async function deleteEmployee() {
 
         if (!response.ok) {
             throw new Error("Erro ")
-        }  
-        
+        }
+
     } catch (error) {
         console.error(`Erro: ${error.message}`); // Captura a mensagem de erro
         alert("Erro ao deletar o registro");

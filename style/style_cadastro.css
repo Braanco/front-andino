@@ -27,13 +27,20 @@ p {
   );
 }
 
-.container_titulo {
-  width: 100%;
-  height: 3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
+body{
+    background-image: url(../assets/1121302.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container_titulo{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: gray;
 }
 
 .container_menu {
@@ -42,19 +49,20 @@ p {
   width: 100%;
   margin-bottom: 2rem;
 }
-.container_menu a {
-  padding: 1rem;
-  text-decoration: none;
-  font-size: large;
-  color: black;
+.container_menu a{
+    padding: 1rem;
+    text-decoration: none;
+    font-size: large;
+    color: blanchedalmond;
 }
-.corpo_conteudo {
-  width: auto;
-  height: 80vh;
-  border: black solid;
-  border-radius: 1%;
-  margin: 0em 10em 3em 5em;
-  box-sizing: border-box;
+.corpo_conteudo{
+    width: auto;
+    height: 100vh;
+    border: black solid;
+    border-radius: 1%;
+    border-right: none;
+    margin: 0em 10em 0em 5em ;
+    box-sizing: border-box;
 }
 
 .container-conteudo {
@@ -64,51 +72,50 @@ p {
   text-align: center;
   align-items: center;
 }
-.container-cadastro label {
-  font-size: 19px;
+.container-cadastro label{
+    width: 70%;
+    font-size: 19px;
+    color: blanchedalmond;
 }
 
-.container-cadastro {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  width: 45%;
-  height: 69%;
-  padding-left: 3em;
-  margin-left: 2em;
-  border-radius: 3px;
+.container-cadastro{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: center;
+    width: 40%;
+    height: 40%;
+    
+    margin-left: 2em;
+   
 }
-.cads {
-  margin: 0% 10% 9% 0%;
+.container-cadastro h3{
+    text-align: center;
+    font-size: 35px;
+    color: blanchedalmond;
+    margin-bottom: 0.2em;
+
 }
-.container-cadastro h3 {
-  font-size: 39px;
-  color: #066a75;
-  margin-left: 100px; 
-}
-.container-cadastro input {
-  padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
-}
-.container-cadastro input {
-  border: 1px solid black;
-  width: 70%;
-  padding-top: 0.5em;
-  padding-left: 10px;
-  border: 2px solid rgba(72, 163, 165, 0.8);
-}
-#cadastro-salario {
-  width: 70%;
-  margin-bottom: 2em;
-  padding-left: 10px;
-  border: 2px solid rgba(72, 163, 165, 0.8);
+.container-cadastro input{
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: rgb(255, 255, 255,0.2);
 }
 
-#cadastro-nome {
-  width: 70%;
-  padding-left: 10px; 
-  border: 2px solid rgba(72, 163, 165, 0.8);
+.container-cadastro input{
+    border: 1px solid black;
+    width: 70%;
+    padding-top: 0.5em;
+
 }
+#cadastro-salario{
+    
+    margin-bottom: 2em;
+}
+
+/*#cadastro-nome{
+    width: 60%;
+}*/
 
 /* Remove as setinhas no Chrome, Safari e Edge */
 #cadastro-registro[type="number"]::-webkit-outer-spin-button,
@@ -146,11 +153,44 @@ input[type="submit"] {
   cursor: pointer; /* Muda o cursor para o ícone de mão ao passar sobre o botão */
 }
 
-input[type="submit"]:hover {
-  background-color: #39bfd7;; /* Muda a cor */
+.container-delete h3{
+    font-size: 35px;
+    color: blanchedalmond;
 }
-.link {
-  font-size: 17px;
-  position: relative;
-  left: 44%; 
+
+.container-delete .container-registro label{
+    color:gray;
+    font-weight: 400;
 }
+.container-registro #registro{
+    background-color: rgb(255, 255, 255,0.2);
+}
+.container-delete label{
+    font-size: 19px;
+    color: blanchedalmond;
+}
+
+#campo-nome, #campo-registro,#campo-salario{
+    background-color: rgb(255, 255, 255,0.2);
+}
+.container-delete input,#submit-cadastrar{
+    border-radius: 0.5em;
+    border: 0 none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.esqueceu{
+    font-size: 17px;
+    width: 70%;
+    text-align: end;
+    padding-right:1em;
+    padding-top: 0.5em;
+}
+
+/*parte de deletar*/
+#delete{
+   
+    border: none;
+    border-left: 2px solid black;
+}
+

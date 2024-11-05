@@ -17,8 +17,8 @@
 }
 
 .container-delete #campo-registro,#campo-nome,#campo-salario{
-    width: 70%;
-    height: 1.5em;
+    width: 60%;
+    height: 1.8em;
     justify-content: start;
     text-align: right;
     margin-bottom: 0.5em;
@@ -51,19 +51,12 @@
 }
 
 .container-delete #submit-delete{
-    border: 5px ;
+    height: 2em;
+    margin-top: 1.5em;
     padding-top: 0.5em;
-    width: 70%;
-    
+    width: 60%;
 }
-#campo-nome, #campo-registro, #campo-salario {
-    min-height: 20px; /* Define uma altura mínima para as divs */
-    border: 2px solid rgba(72, 163, 165, 0.8);
-    padding: 5px; /* Espaçamento interno */
-    margin-bottom: 10px; /* Espaço entre as divs */
-    background-color: #f9f9f9; /* Cor de fundo (opcional) */
-  }
-  #registro{
-    border: 2px solid rgba(72, 163, 165, 0.8);
-  }
 
+.container-registro{
+    margin-bottom: 1.8em;
+}

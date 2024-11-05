@@ -1,4 +1,4 @@
-const getUrl = "http://localhost:8080/v1/star_chile/getAll";
+const getUrl = "http://localhost:8080/v1/andino/getAll";
 
 async function fetchApiData() {
     try {
@@ -65,7 +65,7 @@ async function setData(datas) {
     try {
         
 
-        const response = await fetch(`http://localhost:8080/v1/star_chile/getAll/${datas.dateInicial}/${datas.dateFinal}`);
+        const response = await fetch(`http://localhost:8080/v1/andino/getAll/${datas.dateInicial}/${datas.dateFinal}`);
 
         if (!response.ok) {
             throw new Error("Erro ao buscar dados por data.");

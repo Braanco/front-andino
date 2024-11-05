@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Cadastro</title>
     <link rel="stylesheet" href="../style/style_cadastro.css">
     <link rel="stylesheet" href="../style/style-delete.css">
+    
 </head>
 
 <body>
@@ -16,7 +18,7 @@
         </div>
 
         <div class="container_menu">
-            <a href="../index.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="./register.html">Registro de Viagem</a>
             <a href="./list.html">Lista de Viagem</a>
             <a href="commission.html">Comissão</a>
@@ -27,45 +29,36 @@
     <main class="corpo_conteudo">
         <div class="container-conteudo">
             <div class="container-cadastro">
-                <div id="cadastro">
-                    <form method="post" action=""> 
-                        <h3 class="cads">Cadastro</h3>
-                      <p> 
-                        <label class="label1" for="cadastro-nome">Nome empregado</label>
-                        <input  type="text" name="cadastro-nome" id="cadastro-nome" required="required"placeholder="Nome" />
-                      </p>
-                      
-                      <p> 
-                        <label for="cadastro-registro">Registro do Empregado</label>
-                        <input  type="number" name="cadastro-registro" id="cadastro-registro" required="required" placeholder="Registro"/> 
-                      </p>
-                      
-                      <p> 
-                        <label for="Cadastro-salario">Salario do Empregado</label>
-                        <input type="number" name="Cadastro-salario" id="cadastro-salario" required="required" placeholder="1234"/>
-                      </p>
-                      
-                      <p> 
-                        <input type="submit" value="Cadastrar"/> 
-                      </p>
-                      
-                      <p class="link" >  
-                        Já tem conta?
-                        <a href="#paralogin"> Login </a>
-                      </p>
-                    </form>
-                  </div>
+                <h3>Cadastrar Empregado</h3>
+
+                <label class="label1" for="cadastro-nome">Nome Empregado</label>
+                <input type="text" name="cadastro-nome" id="cadastro-nome">
+
+                <label class="label2" for="cadastro-registro">Registro do Empregado</label>
+                <input type="number" name="cadastro-registro" id="cadastro-registro">
+
+                <!-- add esse campo para o metodo do js-->
+                <label class="label4" for="cadastro-senha">Senha</label>
+                <input type="password" name="cadastro-senha" id="cadastro-senha">
+
+
+                <label class="label3" for="Cadastro-salario">Salario do Empregado</label>
+                <input type="number" name="Cadastro-salario" id="cadastro-salario">
+
+                <input type="submit" id="submit-cadastrar" value="Cadastrar">
+                <p class="esqueceu">Esquceu a senha? <a href="#">Recuperar.</a></p>
             </div>
-            <div class="container-delete">
+
+            <div class="container-delete" id="delete">
                 <h3>Deletar empregado</h3>
 
-                <div>
+                <div class="container-registro" >
                     <label for="registro">Número de registro</label>
                     <input type="number" name="registro" id="registro">
                     <input type="submit" name="pesquisar" id="pesquisar" value="Pesq.">
                 </div>
 
-                
+
                 <label for="campo-nome">Nome Empregado </label>
 
                 <div id="campo-nome"></div>

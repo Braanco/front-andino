@@ -14,8 +14,16 @@ p{
 
 
 
+body{
+    background-image:url(../assets/1121302.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
 .container_titulo{
-    width: 100%;
+    width: auto;
     height: 3em;
     display: flex;
     align-items: center;
@@ -26,17 +34,19 @@ p{
 .container_menu{
     display: flex;
     justify-content: center;
-    width: 100%;   
-    margin-bottom: 2rem;
+    align-items: center;
+    width: auto; 
+    margin: 2em 2em;  
+    
 }
 .container_conteudo{
     display: flex;
     flex-direction: column;
+    gap: 1em;
     width: 50%;
     height: 35em;
-    margin-left: 2em;
-    border: 1px solid;
-    border-radius: 3%;
+    margin-left: 3em;
+    margin-top: 10em;
     overflow: auto;
 
 }
@@ -47,10 +57,11 @@ p{
 }
 .corpo_conteudo{
     width: auto;
-    height: 102vh;
-    border: black solid;
+    height: 100vh;
+    border: black solid; /* a cor gray tambem pode funcionar*/
     border-radius: 1%;
     border-right: none;
+    border-bottom: none;
     margin: 0em 10em 0em 5em ;
     box-sizing: border-box;
 }
@@ -69,7 +80,7 @@ p{
     padding: 1rem;
     text-decoration: none;
     font-size: large;
-    color: black;
+    color: blanchedalmond;
 }
 
 
@@ -85,24 +96,25 @@ p{
 
 .conteudo{
     display: flex;
-    width: 80%;
-    margin-left: 3em;
-    margin-bottom: 2em;
+    width: 80%; 
     align-items: center;
 }
 
-
-.top5{
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-bottom: 1em;
-    font-size: 26px;
+.titulo{
+    font-size: 5em;
+    color:gray;
+    
 }
 
 .container_text{
     width: 60vh;
-    height: 8em;
-    margin-left: 2em;
+    height: auto;
+    
+}
+.container_text p{
+    font-size: 24px;
+    color: blanchedalmond;
+    
 }
 
 span{
@@ -118,8 +130,7 @@ span{
 
 .container-clima{
     width: 40%;
-    height: 60%;
-    border: 1px solid;
+    height: 50%;
     border-radius: 2%;
     
 }
@@ -130,6 +141,7 @@ span{
     font-family: 'serif';
     padding-bottom: 0.5em ;
 }
+
 
 
 
