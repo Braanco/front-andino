@@ -1,4 +1,6 @@
 const postUrl = "http://localhost:8080/v1/andino/create";
+//const token = localStorage.getItem('token');
+
 
 document.getElementById("submit-register").addEventListener("click", function (event) {
     event.preventDefault();
@@ -30,7 +32,9 @@ async function sendData(datas) {
     const response = await fetch(postUrl, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+            
         },
         body: JSON.stringify(datas)
     })

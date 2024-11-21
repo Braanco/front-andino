@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Cadastro</title>
     <link rel="stylesheet" href="../style/style_cadastro.css">
     <link rel="stylesheet" href="../style/style-delete.css">
-    
+    <link rel="stylesheet" href="../style/style-logout.css">
 </head>
 
 <body>
@@ -23,6 +23,10 @@
             <a href="./list.html">Lista de Viagem</a>
             <a href="commission.html">Comissão</a>
             <a href="#">Cadastrar</a>
+            <div class="container-logout">
+                <input type="submit" value="logout" id="logout">
+                <img src="https://img.icons8.com/?size=100&id=Wgd88M98QIxt&format=png&color=000000" alt="img-logout" id="img-logout">
+            </div>
         </div>
     </header>
 
@@ -52,7 +56,7 @@
             <div class="container-delete" id="delete">
                 <h3>Deletar empregado</h3>
 
-                <div class="container-registro" >
+                <div class="container-registro">
                     <label for="registro">Número de registro</label>
                     <input type="number" name="registro" id="registro">
                     <input type="submit" name="pesquisar" id="pesquisar" value="Pesq.">
@@ -77,6 +81,7 @@
         </div>
     </main>
     <script src="../script/cadastrar.js"></script>
+    <script src="../script/logout.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,15 @@
 const getUrl = "http://localhost:8080/v1/andino/getAll";
+//const token = localStorage.getItem('token')
 
 async function fetchApiData() {
     try {
-        const response = await fetch(getUrl);
+        const response = await fetch(getUrl, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        });
 
         // Verifica se a resposta é bem-sucedida
         if (!response.ok) {
@@ -25,7 +32,7 @@ function displayData(data) {
 
     tableBody.innerHTML = '';
 
-    data.forEach(item =>{
+    data.forEach(item => {
         const row = document.createElement('tr');
 
         row.innerHTML = `
@@ -41,31 +48,37 @@ function displayData(data) {
         <td>${item.finalPrice}</td>
     `;
 
-    tableBody.appendChild(row);
+        tableBody.appendChild(row);
     })
 }
 
 // Chama a função para buscar e exibir os dados
 fetchApiData();
 
-document.getElementById("pesquisar").addEventListener("click",function(event) {
-event.preventDefault();
+document.getElementById("pesquisar").addEventListener("click", function (event) {
+    event.preventDefault();
 
-    const datas ={
+    const datas = {
         dateInicial: document.getElementById("pesquisa-inicial").value,
-        dateFinal:document.getElementById("pesquisa-final").value
+        dateFinal: document.getElementById("pesquisa-final").value
     }
     setData(datas);
-    
+
 
 })
 
 async function setData(datas) {
-    
-    try {
-        
 
-        const response = await fetch(`http://localhost:8080/v1/andino/getAll/${datas.dateInicial}/${datas.dateFinal}`);
+    try {
+
+
+        const response = await fetch(`http://localhost:8080/v1/andino/getAll/${datas.dateInicial}/${datas.dateFinal}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        });
 
         if (!response.ok) {
             throw new Error("Erro ao buscar dados por data.");

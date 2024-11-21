@@ -8,8 +8,16 @@ document.getElementById("submit-cadastrar").addEventListener("click", function (
     const datas = {
         name: document.getElementById("cadastro-nome").value,
         numberRegistry: parseInt(document.getElementById("cadastro-registro").value, 10),
-        salary: parseFloat(document.getElementById("cadastro-salario").value)
+        salary: parseFloat(document.getElementById("cadastro-salario").value)  
     };
+
+    //dados para criar o registro
+    const dados = {
+        user_name: document.getElementById("cadastro-registro").value,
+        password: document.getElementById("cadastro-senha").value,
+        role:"USER"
+    
+    }
 
     for (const [key, value] of Object.entries(datas)) {
         if (!value) {  // Se o valor for nulo, indefinido ou vazio
@@ -17,8 +25,8 @@ document.getElementById("submit-cadastrar").addEventListener("click", function (
             return;  // Interrompe o envio se encontrar um campo inválido
         }
     }
+    criarRegistro(dados);
     createEmployee(datas);
-
 })
 
 async function createEmployee(datas) {
@@ -151,3 +159,29 @@ async function deleteEmployee() {
 
 }
 
+/***************************************************/
+const urlRegistro = "http://localhost:8080/v1/andino/register";
+
+
+//implementar o metodo para registrar o funcionario(usuario(É o numero de registro) , senha)
+async function criarRegistro(dados) {
+    
+    const response = await fetch(urlRegistro, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(dados)
+    });
+
+    if (!response.ok) {
+        const errorData = await response.json();
+        alert("numero de registro já existe");
+        throw new Error(errorData.message || "Ocorreu um erro no servidor")
+    }
+
+    const data = await response.json();
+    console.log('Registro com sucesso: ', dados);
+    
+}

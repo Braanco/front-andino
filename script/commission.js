@@ -1,5 +1,7 @@
 const url = "http://localhost:8080/v1/andino/employee/get-Employee/";
 const urlClient = "http://localhost:8080/v1/andino/employee/"
+//const token = localStorage.getItem('token')
+
 
 document.getElementById("submit-pesquisar").addEventListener('click', function (event) {
     event.preventDefault();
@@ -19,7 +21,13 @@ document.getElementById("submit-pesquisar").addEventListener('click', function (
 
 async function sendData(numberRegistry) {
     try {
-        const response = await fetch(`${url}${numberRegistry}`);
+        const response = await fetch(`${url}${numberRegistry}`,{
+            method:'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        });
 
         if (!response.ok) {
             alert("Empregado não encontrado ou não existe")
@@ -51,7 +59,13 @@ function displayData(datas) {
 
 
 async function displayDataClient(numberRegistry) {
-    var response = await fetch(`${urlClient}${numberRegistry}`);
+    var response = await fetch(`${urlClient}${numberRegistry}`,{
+        method:'GET',
+        headers:{
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        }
+    });
 
     if (!response.ok) {
         throw new Error(`Erro HTTP! Status: ${response.status}`);
