@@ -91,9 +91,49 @@ async function displayDataClient(numberRegistry) {
              <td>${item.tourName}</td>
              <td>${formatter.format(item.price)}</td>
              <td>${formatter.format(item.finalPrice)}</td>
+             <td><button class="delete-btn" data-id="${item.id}">deletar</button></td>
          `;
 
         tableBody.appendChild(row);
     });
 
+      //add o a ação de deletar o dado
+      document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', async (event) => {
+            const id = event.target.getAttribute('data-id');
+            const confirmDelete = confirm(`Deseja realmente deletar o item com ID ${id}?`);
+
+            if (confirmDelete) {
+                await deletar(id); // Chama a função de deletar
+            }
+        });
+    });
+}
+
+//deletar o cliente
+const urlDelete = "http://localhost:8080/v1/andino/delete/"
+async function deletar(id) {
+    try {
+        const response = await fetch(urlDelete +id, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`Erro ao deletar o item com ID ${id}. Status: ${response.status}`);
+        }
+
+        alert(`Item com ID ${id} foi deletado com sucesso.`);
+         
+        const numberRegistry = document.getElementById("numero-registro").value;
+        if (numberRegistry) {
+            await displayDataClient(numberRegistry);
+        }
+    } catch (error) {
+        console.error('Erro ao deletar:', error);
+        alert('Erro ao deletar o item. Tente novamente.');
+    }
 }

@@ -92,6 +92,12 @@ td{
     color: blanchedalmond;
 }
 
+.delete-btn{
+    padding: 0 0.2em ;
+    color: blanchedalmond;
+
+    background-color: rgb(255, 255, 255,0.5);
+}
 
 
 
@@ -167,5 +173,11 @@ th, td {
     border: 1px black solid;
     border-radius: 5%;
     opacity: 0.5;
+}
+
+#pesquisar{
+    color: blanchedalmond;
+    background-color: rgb(255, 255, 255,0.5);
+    padding: 0 0.2em;
 }
 

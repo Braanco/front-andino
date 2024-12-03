@@ -21,6 +21,7 @@ async function fetchApiData() {
 
         // Função para exibir os dados no HTML
         displayData(data);
+
     } catch (error) {
         console.error('Erro ao buscar dados:', error);
     }
@@ -46,11 +47,26 @@ function displayData(data) {
         <td>${item.personQuantity}</td>
         <td>${item.tourName}</td>
         <td>${item.finalPrice}</td>
+        <td><button class="delete-btn" data-id = "${item.id}">delete</button></td>
     `;
 
         tableBody.appendChild(row);
-    })
+    });
+
+    //add o a ação de deletar o dado
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', async (event) => {
+            const id = event.target.getAttribute('data-id');
+            const confirmDelete = confirm(`Deseja realmente deletar o item com ID ${id}?`);
+
+            if (confirmDelete) {
+                await deletar(id); // Chama a função de deletar
+            }
+        });
+    });
 }
+
+
 
 // Chama a função para buscar e exibir os dados
 fetchApiData();
@@ -90,5 +106,30 @@ async function setData(datas) {
     } catch (error) {
         console.error('Erro ao buscar dados:', error);
         alert('Erro ao buscar dados. Tente novamente.');
+    }
+}
+
+
+//deletar o cliente
+const urlDelete = "http://localhost:8080/v1/andino/delete/"
+async function deletar(id) {
+    try {
+        const response = await fetch(urlDelete +id, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`Erro ao deletar o item com ID ${id}. Status: ${response.status}`);
+        }
+
+        alert(`Item com ID ${id} foi deletado com sucesso.`);
+        fetchApiData(); // Atualiza os dados após a exclusão
+    } catch (error) {
+        console.error('Erro ao deletar:', error);
+        alert('Erro ao deletar o item. Tente novamente.');
     }
 }
